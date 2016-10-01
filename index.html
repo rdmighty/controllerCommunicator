@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Just a test</title>		
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		</script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css"/>
+		<link rel="stylesheet" href="css/style.css">
+		</script>	
+
+		<!-- Imperative Scripts -->
+		<script type="text/javascript" src="scripts/libs/angular.js"></script>
+		<script type="text/javascript" src="scripts/libs/ui-bootstrap-tpls-0.13.2.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+		<script type="text/javascript" src="scripts/libs/jquery.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+		
+		<!-- Post Ready Scripts -->		
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="./scripts/services/genderService.js"></script>
+		<script type="text/javascript" src="scripts/controllers/indexController.js"></script>
+		<style>
+			body{
+				padding:25px;
+			}
+		</style>
+	</head>
+	<body ng-app="angular">
+		<div ng-controller="parentController as vm">
+			<button class="btn btn-primary" ng-click="vm.clickButton()">Button in Parent Controller</button>
+			<button class="btn btn-primary" ng-click="vm.clickSecondButton()">Second Button</button>
+		</div>
+		<br/>
+		<br/>
+		<div ng-controller="childController as vm">
+			Hi! I am Child Controller and Button in Parent Controller is clicked {{vm.buttonClickedCount}} times<br/>
+			Hi! I am Child Controller and Second Button in Parent Controller is clicked {{vm.secondButtonClickedCount}} times
+		</div>
+		<br/>
+		<br/>
+		<div ng-controller="watchController as vm">
+			Hi! I am Watch Controller and Button in Parent Controller is clicked {{vm.buttonClickedCount}} times<br/>
+			Hi! I am Watch Controller and Second Button in Parent Controller is clicked {{vm.secondButtonClickedCount}} times
+		</div>
+	</body>
+</html>
