@@ -14,7 +14,7 @@ app.controller('childController', ['$scope', '$timeout', 'genderService', functi
 	var vm = this;
 	vm.buttonClickedCount = 0;
 	vm.secondButtonClickedCount = 0;
-	var count = 0 ;
+	
 	genderService.register('loadItem', function(){
 		vm.buttonClickedCount ++;
 	});
@@ -27,7 +27,7 @@ app.controller('watchController', ['$scope', '$timeout', 'genderService', functi
 	var vm = this;
 	vm.buttonClickedCount = 0;
 	vm.secondButtonClickedCount = 0;
-	var count = 0 ;
+	
 	genderService.register('loadItem', function(){
 		vm.buttonClickedCount ++;
 	});
